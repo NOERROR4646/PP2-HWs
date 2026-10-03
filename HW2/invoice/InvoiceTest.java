@@ -6,13 +6,13 @@ public class InvoiceTest {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Ne bilim, yaz numberi");
+        System.out.println("Provide invoice number");
         String number = sc.next();
-        System.out.println("Indi yaz descriptioni");
+        System.out.println("Now provide invoice description");
         String desc = sc.next();
-        System.out.println("molodec, indi quantity");
+        System.out.println("Also provide the quantity of the items");
         int quantity = sc.nextInt();
-        System.out.println("Finally PRICEEEE!!!!!");
+        System.out.println("Finally, write down its price in dollars");
         double pricePerItem = sc.nextDouble();
 
         Invoice testInvoice = new Invoice(number, desc, quantity, pricePerItem);
@@ -24,7 +24,7 @@ public class InvoiceTest {
         System.out.println("Price per item: " + testInvoice.getPricePerItem());
         System.out.println("Final invoice amount: " + testInvoice.getInvoiceAmount());
 
-        System.out.println("Now try changing some stuff.");
+        System.out.println("Now try changing some values.");
         System.out.println("New number: ");
         testInvoice.setPartNumber(sc.next());
         System.out.println("New description: ");
